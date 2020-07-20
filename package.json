@@ -1,0 +1,19 @@
+{
+  "name": "portfolio",
+  "version": "1.0.0",
+  "description": "portfolio Guillaume Flambard",
+  "main": "index.js",
+  "scripts": {
+    "sass": "node-sass -w scss/ -o dist/css/ --recursive"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://zoanlogia@bitbucket.org/zoanlogia/portfolio.git"
+  },
+  "author": "Guillaume",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/zoanlogia/portfolio#readme",
+  "dependencies": {
+    "node-sass": "^4.14.1"
+  }
+}
