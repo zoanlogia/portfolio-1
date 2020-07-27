@@ -102,10 +102,6 @@ main {
     grid-area: job2;
   }
 
-  .job-3 {
-    grid-area: job3;
-  }
-
   .job {
     background: lighten($primary-color, 5);
     padding: 0.5rem;
@@ -117,7 +113,6 @@ main {
 .projects {
   display: grid;
   grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr);
 
   img {
     width: 100%;
@@ -193,5 +188,10 @@ main {
     background: #fff;
   }
 }
-@import 'mobile';
 
+.border-side {
+  border-right: #fff 2px solid;
+  border-bottom: #fff 1px solid;
+}
+
+@import 'mobile';

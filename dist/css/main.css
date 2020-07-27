@@ -39,14 +39,14 @@
   .menu-nav {
     margin: 0;
     padding: 0;
-    background: #011845;
+    background: #033042;
     list-style: none;
     transform: translate3d(0, -100%, 0);
     transition: all 0.5s ease-out; }
     .menu-nav.show {
       transform: translate3d(0, 0, 0); }
   .menu-branding {
-    background: #01215e;
+    background: #04425a;
     transform: translate3d(0, 100%, 0);
     transition: all 0.5s ease-out; }
     .menu-branding.show {
@@ -92,7 +92,7 @@
   box-sizing: border-box; }
 
 body {
-  background: #01215e;
+  background: #04425a;
   color: #fff;
   height: 100%;
   margin: 0;
@@ -110,7 +110,7 @@ body {
       width: 100%;
       height: 100%;
       z-index: -1;
-      background: rgba(1, 33, 94, 0.5); }
+      background: rgba(4, 66, 90, 0.5); }
 
 h1,
 h2,
@@ -172,17 +172,14 @@ main {
     grid-area: job1; }
   .about-info .job-2 {
     grid-area: job2; }
-  .about-info .job-3 {
-    grid-area: job3; }
   .about-info .job {
-    background: #012a77;
+    background: #055472;
     padding: 0.5rem;
     box-shadow: 9px 9px; }
 
 .projects {
   display: grid;
-  grid-gap: 0.7rem;
-  grid-template-columns: repeat(3, 1fr); }
+  grid-gap: 0.7rem; }
   .projects img {
     width: 100%; }
     .projects img:hover {
@@ -223,7 +220,7 @@ main {
   color: #fff; }
 
 .btn-light {
-  background: #6197fd;
+  background: #65cff8;
   color: #333; }
 
 .btn-custom {
@@ -232,6 +229,10 @@ main {
   margin: 10px; }
   .btn-custom:hover {
     background: #fff; }
+
+.border-side {
+  border-right: #fff 2px solid;
+  border-bottom: #fff 1px solid; }
 
 @media screen and (min-width: 1171px) {
   .projects {
@@ -270,7 +271,7 @@ main {
       border-radius: 50%; }
   .about-info {
     grid-template-areas: 'bioimage' 'bio' 'job1' 'job2' 'job3';
-    grid-template-columns: 1fr; }
+    grid-template-columns: 1fr 3fr; }
   .projects {
     grid-template-columns: repeat(2, 1fr); } }
 
@@ -281,6 +282,6 @@ main {
       margin-top: 10vh; }
     main .lg-heading {
       margin-top: 1rem;
-      font-size: 5rem; }
-  .projects {
+      font-size: 3rem; }
+  .projects, .about-info {
     grid-template-columns: 1fr; } }
