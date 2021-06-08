@@ -7,5 +7,6 @@
     <orderEntry type="library" name="TweenLite" level="application" />
     <orderEntry type="library" name="EasePack" level="application" />
     <orderEntry type="library" name="demo" level="application" />
+    <orderEntry type="library" name="all" level="application" />
   </component>
 </module>
