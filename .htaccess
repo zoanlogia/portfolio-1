@@ -315,7 +315,8 @@ AddDefaultCharset utf-8
     # RewriteOptions <options>
 
     # (6)
-    RewriteCond %{HTTPS} =on
+    RewriteCond %{HTTPS} =off
+    RewriteRule (.*) https://%{HTTP_HOST}%{REQUEST_URI}
     RewriteRule ^ - [env=proto:https]
     RewriteCond %{HTTPS} !=on
     RewriteRule ^ - [env=proto:http]
@@ -338,15 +339,15 @@ AddDefaultCharset utf-8
 #     https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml
 #     https://tools.ietf.org/html/draft-ietf-acme-acme-12
 
-# <IfModule mod_rewrite.c>
-#    RewriteEngine On
-#    RewriteCond %{HTTPS} !=on
-#    # (1)
-#    # RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
-#    # RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[\w-]+$
-#    # RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-#    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [R=301,L]
-# </IfModule>
+<IfModule mod_rewrite.c>
+    RewriteEngine On
+    RewriteCond %{HTTPS} !=on
+    # (1)
+    # RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
+    # RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[\w-]+$
+    # RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
+    RewriteRule ^apache-redirect-http-to-https.html$ https://www.flambard.alwaysdata.net/index.html/apache-redirect-http-to-hhtps.html [R=301,L]
+</IfModule>
 
 # ----------------------------------------------------------------------
 # | Suppressing the `www.` at the beginning of URLs                    |
