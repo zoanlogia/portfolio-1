@@ -346,7 +346,7 @@ AddDefaultCharset utf-8
     # RewriteCond %{REQUEST_URI} !^/\.well-known/acme-challenge/
     # RewriteCond %{REQUEST_URI} !^/\.well-known/cpanel-dcv/[\w-]+$
     # RewriteCond %{REQUEST_URI} !^/\.well-known/pki-validation/[A-F0-9]{32}\.txt(?:\ Comodo\ DCV)?$
-    RewriteRule ^apache-redirect-http-to-https.html$ https://www.flambard.alwaysdata.net/apache-redirect-http-to-hhtps.html [R=301,L]
+    RewriteRule ^apache-redirect-http-to-https.html$ https://flambard.alwaysdata.net/apache-redirect-http-to-https.html [R=301,L]
 </IfModule>
 
 # ----------------------------------------------------------------------
